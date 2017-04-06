@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`webpack migrate matches v1 to v2 snapshot 1`] = `
+Array [
+  Object {
+    "context": "/Users/admin/git/webpack-config-migrate/__tests__/src",
+    "entry": Object {
+      "admin_app": "./admin/app.js",
+    },
+    "externals": Object {
+      "jquery": "jQuery",
+    },
+    "module": Object {
+      "rules": Array [
+        Object {
+          "exclude": Array [
+            /node_modules/,
+            /vendor/,
+          ],
+          "test": /\\\\\\.js\\?\\$/,
+          "use": Array [
+            "babel",
+          ],
+        },
+        Object {
+          "test": /\\\\\\.less\\$/,
+          "use": Array [
+            "style-loader",
+            "css-loader",
+            "less-loader",
+          ],
+        },
+        Object {
+          "test": /\\\\\\.css\\$/,
+          "use": Array [
+            "style-loader",
+            "css-loader",
+          ],
+        },
+      ],
+    },
+    "output": Object {
+      "filename": "[name].js",
+      "path": "../static/dist",
+    },
+    "plugins": Array [],
+    "resolve": Object {
+      "modules": Array [
+        "./app_modules",
+      ],
+    },
+    "resolveLoader": Object {},
+  },
+]
+`;
